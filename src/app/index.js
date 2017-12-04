@@ -8,16 +8,27 @@ import { Home } from "../components/Home";     // Including the component to the
 class App extends React.Component {
 
 	render(){
+
+			var hobbies = {
+				user1: ["basketball", "salsa"],
+				user2: ["salsa", "bachata"]
+			};
+
 		return(
+
 			<div>
 				<div>
 					<Header/>  {/* This is how we include the exported component */}
 				</div>
 				<h1>Hello World!</h1>
 				<div>
-					<Home/>    {/* This is how we include the exported component */}
+					<h3>User1</h3>
+					<Home name={"ABC"} age={"20"} hobby={hobbies.user1}/>    {/* This is how we include the exported component and pass props (properties to it)*/}
+					<h3>User2</h3>
+					<Home name={"XYZ"} age={"22"} hobby={hobbies.user2}/>    {/* This is how we include the exported component and pass props (properties to it)*/}
 				</div>
 			</div>
+
 		);
 	}
 
