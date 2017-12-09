@@ -75,7 +75,7 @@ export class Home extends React.Component {
 
 }
 
-Home.propTypes = {
-	setName: React.PropTypes.string,
-	initialAge: React.PropTypes.number
-};
+// Home.propTypes = {
+// 	setName: React.PropTypes.string,
+// 	initialAge: React.PropTypes.number
+// };
