@@ -1,3 +1,9 @@
+// Excellent Source for learning ReactJS - https://www.youtube.com/watch?v=JPT3bFIwJYA&list=PL55RiY5tL51oyA8euSROLjMFZbXaV7skS
+// To see why ReactJS is better than plain JS, check Video 9 in the playlist - https://www.youtube.com/watch?v=Iw2BLUjQo1E
+
+// Jist of Video #9 - As decribed in the 9th tutorial, one of the advantages of ReactJS is that it updates (re-renders) only 
+// what is changed instead of re-rendering the whole documnet. It does this by comparing the DOM to the original state and the 
+// state after changes are made. Then it re-renders only that particular change of state making loading of pages much faster.
 
 import React from 'react';
 import { render } from 'react-dom';
@@ -18,7 +24,7 @@ class App extends React.Component {
 
 			<div>
 				<div>
-					<Header/>  {/* This is how we include the exported component */}
+					<Header homeLink="Home"/>  {/* This is how we include the exported component */}
 				</div>
 				<h1>Hello World!</h1>
 				<div>
