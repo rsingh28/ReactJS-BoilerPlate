@@ -29,7 +29,7 @@ class App extends React.Component {
 				<h1>Hello World!</h1>
 				<div>
 					<h3>User1</h3>
-					<Home name={"ABC"} initialAge={20} hobby={hobbies.user1}/>    {/* This is how we include the exported component and pass props (properties to it)*/}
+					<Home setName={"ABC"} initialAge={20} hobby={hobbies.user1}/>    {/* This is how we include the exported component and pass props (properties to it)*/}
 				</div>
 			</div>
 

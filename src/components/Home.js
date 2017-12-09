@@ -14,7 +14,7 @@ export class Home extends React.Component {
 		// would not update the UI
 		this.state = {
 			age: props.initialAge,
-			name: props.name
+			name: props.setName
 		};
 	}
 
@@ -54,13 +54,13 @@ export class Home extends React.Component {
 					<p> Formatted Name = {this.state.name} </p>  {/* For instance, their will be a change of state when the second button is pressed */}
 
 					<p> Age = {this.state.age} </p>
-					
+
 					<p> Hobbies = </p>
 
 				    {/* Since the hobby poperty is an array, we can create an un-oreder list and loop through the array, displaying it as elements of the list- */}
 				    {/* This is how looping is done in React */}
 					<ul>
-						{this.props.hobby.map( (x) => <li> {x} </li> )}
+						{this.props.hobby.map( (x,i) => <li key={i}> {x} </li> )}
 					</ul> 
 
 					<button onClick={() => this.ageIncrease()}>Increse age dynamically</button>
@@ -74,3 +74,8 @@ export class Home extends React.Component {
 	}
 
 }
+
+Home.propTypes = {
+	setName: React.PropTypes.string,
+	initialAge: React.PropTypes.number
+};
