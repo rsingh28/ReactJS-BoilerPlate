@@ -13,6 +13,12 @@ import { Home } from "../components/Home";     // Including the component to the
 // App is a component here. This is the general way of making a component 
 class App extends React.Component {
 
+	// This simple method will be called from the Header.js component. A reference is passed as props
+	// and the actual call is in Header.js
+	onGreet(){
+		alert("Hello Mr. Clicker");
+	}
+
 	render(){
 
 			var hobbies = {
@@ -29,7 +35,7 @@ class App extends React.Component {
 				<h1>Hello World!</h1>
 				<div>
 					<h3>User1</h3>
-					<Home setName={"ABC"} initialAge={20} hobby={hobbies.user1}/>    {/* This is how we include the exported component and pass props (properties to it)*/}
+					<Home setName={"ABC"} initialAge={20} hobby={hobbies.user1} greet={this.onGreet}/>    {/* This is how we include the exported component and pass props (properties to it)*/}
 				</div>
 			</div>
 

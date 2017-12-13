@@ -48,7 +48,7 @@ export class Home extends React.Component {
 				    {/* We don't have to specify the props as arguments. React.Component takes care of it and we can just use it right away as - this.props.<prop_name> - */}
 
 				    {/* This is the name passed as property */}
-					<p> Name = {this.props.name} </p>  
+					<p> Name = {this.props.setName} </p>  
 
 					{/* This is that represents any change of "State" in the document */}
 					<p> Formatted Name = {this.state.name} </p>  {/* For instance, their will be a change of state when the second button is pressed */}
@@ -67,6 +67,8 @@ export class Home extends React.Component {
 					<button onClick={() => this.dumbNameFormatting()}>Add stars to your name LOL</button>
 
 				</div>
+
+				<button onClick={this.props.greet}>Greet Me</button>
 
 			</div>
 
